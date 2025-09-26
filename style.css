@@ -1,0 +1,85 @@
+video {
+	display: none;
+}
+canvas {
+/*	display: none;
+*/
+}
+
+
+.roiset {
+	display: none;
+}
+ 
+#templateGrid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(70px, 1fr));
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+    max-width: 400px;
+}
+
+.template-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    border: 1px solid #eee; /* 기본 테두리 */
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.template-item:hover {
+    border-color: #007bff; /* 마우스 오버 시 테두리 색상 변경 */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.template-thumbnail {
+    /* width: 55px; */
+    height: 45px;
+    object-fit: contain;
+    /* ⭐ 아래 두 줄을 제거하거나, border: none; 으로 설정하여 이미지 자체 테두리 제거 */
+    border: none; /* 이미지 자체의 테두리 제거 */
+    /* transition: border-color 0.2s ease; /* 더 이상 border-color를 변경하지 않으므로 필요 없음 */
+}
+
+/* ⭐ .template-thumbnail:hover { ... } 규칙 전체를 제거합니다. */
+/* 이미지는 이제 부모인 .template-item의 hover 상태에 따라 테두리가 변경되지 않습니다. */
+/* .template-thumbnail:hover {
+    border-color: #007bff;
+} */
+
+
+.imgalt {
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    font-size: 0.85em;
+    color: #555;
+}
+
+/*FROM SITE CODE : buff 
+*/
+
+/* ⭐ 새로 추가할 CSS */
+.info {
+    grid-column: 1 / -1; /* 모든 그리드 열을 차지하도록 설정 */
+    text-align: left; /* 텍스트를 가운데 정렬 (선택 사항) */
+    margin-bottom: 1px; /* 아래쪽 여백 추가 (선택 사항) */
+    margin-top: 5px; /* 아래쪽 여백 추가 (선택 사항) */
+    font-weight: bold; /* 글씨를 더 진하게 (선택 사항) */
+    color: #333; /* 글씨 색상 (선택 사항) */
+
+}
+
+
+.gap10 {height:10px;clear:both;overflow:hidden;display:block;}
