@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-795SY2E8E3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-795SY2E8E3');
+</script>
+	<meta charset="UTF-8">
+	<title>메이플랜드 홀심 알리미</title>
+	<script src="https://docs.opencv.org/4.8.0/opencv.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h2>메이플랜드 홀심 알리미</h2>
+
+	<!-- 해상도 버튼 -->
+	<div id="resolutionButtons">
+	  <button id="btn1280">1280 해상도</button>
+	  <button id="btn1600">1600 해상도</button>
+	  <button id="btn1920">1920 해상도</button>
+	</div>
+	
+	<button id="startBtn">화면공유</button>
+    <p>	선택된 해상도 : 	<span id="currentTemplateName">없음</span> </p>
+	<p>	실행 여부 : <span id="status">🔴 동작 대기중</span></p>
+	
+	<div>
+		<label for="alarmTargetInput">알람 목표 시간(초):</label>
+		<input type="number" id="alarmTargetInput" value="10">
+	</div>
+
+	
+    <div class="roiset">
+        <h3>탐지 설정</h3>
+        <label for="roiWidthInput">ROI 너비:</label>
+        <input type="number" id="roiWidthInput" value="450"><br>
+        <label for="roiHeightInput">ROI 높이:</label>
+        <input type="number" id="roiHeightInput" value="50"><br>
+        <label for="roiYInput">ROI Y좌표:</label>
+        <input type="number" id="roiYInput" value="120"><br>
+    </div>
+
+    <div>
+
+        <label for="matchThresholdInput">매칭 임계값:</label>
+        <input type="number" id="matchThresholdInput" step="0.001" value="0.965">
+    </div>
+
+	<video id="video" autoplay playsinline></video>
+	<canvas id="canvas"></canvas>
+
+	<audio id="alertSound" src="alert.mp3" preload="auto"></audio>
+
+	<script src="main.js"></script>
+</body>
+</html>
+
+
+
