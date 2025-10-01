@@ -57,6 +57,34 @@
 	<audio id="alertSound" src="alert.mp3" preload="auto"></audio>
 
 	<script src="main.js"></script>
+
+	<script>
+  document.getElementById('btn1280').addEventListener('click', function() {
+    gtag('event', 'resolution_click', {
+      'resolution': '1280',
+      'page_title': document.title,
+      'page_location': window.location.href
+    });
+  });
+
+  document.getElementById('btn1600').addEventListener('click', function() {
+    gtag('event', 'resolution_click', {
+      'resolution': '1600',
+      'page_title': document.title,
+      'page_location': window.location.href
+    });
+  });
+
+  document.getElementById('btn1920').addEventListener('click', function() {
+    gtag('event', 'resolution_click', {
+      'resolution': '1920',
+      'page_title': document.title,
+      'page_location': window.location.href
+    });
+  });
+</script>
+
+	
 </body>
 </html>
 
