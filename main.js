@@ -16,8 +16,8 @@ const alarmTargetInput = document.getElementById('alarmTargetInput');
 const btn1600w = document.getElementById('btn1600w');
 const btn1600f = document.getElementById('btn1600f');
 
-let currentRoiWidth = parseInt(roiWidthInput.value) || 450;
-let currentRoiHeight = parseInt(roiHeightInput.value) || 50;
+let currentRoiWidth = parseInt(roiWidthInput.value) || 600;
+let currentRoiHeight = parseInt(roiHeightInput.value) || 70;
 let currentRoiY = parseInt(roiYInput.value) || 120;
 let currentMatchThreshold = parseFloat(matchThresholdInput.value) || 0.965;
 
@@ -42,8 +42,8 @@ const waitForCV = setInterval(() => {
 
 // 해상도별 템플릿 이미지 / ROI 프리셋
 const templateMap = {
-	'1600w': { url: './img/1600/25.png', name: '1600 (창모드)', rolw: 600, rolh: 50, roly: 120 },
-	'1600f': { url: './img/1600/25f.png', name: '1600 (전체화면)', rolw: 600, rolh: 50, roly: 120 }
+	'1600w': { url: './img/1600/25.png', name: '1600 (창모드)', rolw: 600, rolh: 70, roly: 120 },
+	'1600f': { url: './img/1600/25f.png', name: '1600 (전체화면)', rolw: 600, rolh: 70, roly: 120 }
 };
 
 async function loadTemplateImage(url, name, rolw, rolh, roly) {
