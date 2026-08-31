@@ -42,8 +42,8 @@ const waitForCV = setInterval(() => {
 
 // 해상도별 템플릿 이미지 / ROI 프리셋
 const templateMap = {
-	'1600w': { url: './img/1600/25.png', name: '1600 (창모드)', rolw: 600, rolh: 50, roly: 25 },
-	'1600f': { url: './img/1600/25f.png', name: '1600 (전체화면)', rolw: 600, rolh: 50, roly: 125 }
+	'1600w': { url: './img/1600/25.png', name: '1600 (창모드)', rolw: 600, rolh: 50, roly: 120 },
+	'1600f': { url: './img/1600/25f.png', name: '1600 (전체화면)', rolw: 600, rolh: 50, roly: 120 }
 };
 
 async function loadTemplateImage(url, name, rolw, rolh, roly) {
