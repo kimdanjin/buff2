@@ -20,9 +20,8 @@
 
 	<!-- 해상도 버튼 -->
 	<div id="resolutionButtons">
-	  <button id="btn1280">1280 해상도</button>
-	  <button id="btn1600">1600 해상도</button>
-	  <button id="btn1920">1920 해상도</button>
+	  <button id="btn1600w">1600 (창모드)</button>
+	  <button id="btn1600f">1600 (전체화면)</button>
 	</div>
 	
 	<button id="startBtn">화면공유</button>
@@ -59,25 +58,17 @@
 	<script src="main.js"></script>
 
 	<script>
-  document.getElementById('btn1280').addEventListener('click', function() {
+  document.getElementById('btn1600w').addEventListener('click', function() {
     gtag('event', 'resolution_click', {
-      'resolution': '1280',
+      'resolution': '1600w',
       'page_title': document.title,
       'page_location': window.location.href
     });
   });
 
-  document.getElementById('btn1600').addEventListener('click', function() {
+  document.getElementById('btn1600f').addEventListener('click', function() {
     gtag('event', 'resolution_click', {
-      'resolution': '1600',
-      'page_title': document.title,
-      'page_location': window.location.href
-    });
-  });
-
-  document.getElementById('btn1920').addEventListener('click', function() {
-    gtag('event', 'resolution_click', {
-      'resolution': '1920',
+      'resolution': '1600f',
       'page_title': document.title,
       'page_location': window.location.href
     });
